@@ -25,6 +25,11 @@ body {
     
     letter-spacing: 0.02em;
 }
+
+body:has(.backdrop.is-open) {
+  overflow-y: hidden;  
+}
+
 .socials .socials-linc:hover,
 .socials .socials-linc:focus
 {
@@ -603,4 +608,197 @@ button {
     color: #434455;
 }
 
+/* #endregion */
+
+/* #region modal */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(46, 47, 66, 0.4);
+    transition-property: apacity, visibility;
+    transition: 250ms ease-in;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-70%);
+    opacity: 0;
+
+    border-radius: 4px;
+    background: #fcfcfc;
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+    transition-property: opasity, transform;
+    transition: 150ms ease;
+
+}
+
+.backdrop.is-open .modal {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    color: #404bbf;
+}
+
+.modal-btn {
+    position: absolute;
+    top: 12px;
+    right: 24px;
+    fill: #2e2f42;
+    transition: color 250ms easy-in;
+    
+}
+
+.modal-btn-icon {
+    stroke: currentColor;
+}
+
+.modal-slogan {
+    width: 360px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
+
+/* #region modalform */
+
+.feedback-form {
+
+}
+
+.feedback-wrapper {
+    margin-bottom: 8px;
+}
+
+.feedback-label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.feedback-field {
+    position: relative;
+}
+
+.feedback-imput {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding: 38px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(46, 47, 66, 0.4),
+     0 1px 3px 0 rgba(0, 0, 0, 0.12), 
+     0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background: #fcfcfc;
+    outline: none;
+    transition: border-color 250ms ease-in;
+}
+.feedback-input:focus {
+    border-color: #404bbf;
+}
+
+.feedback-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2e2f42;
+    pointer-events: none;
+}
+
+.feedback-imput:focus + .feedback-icon {
+    fill: #404bbf;
+}
+
+.feedback-comment {
+    height: 120px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+   
+    outline: none;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    resize: none;
+}
+.feedback-comment::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+}
+/* #custom chekbox */
+.feedback-agreement {
+    display: block;
+    margin-bottom: 24px;
+
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+     color: #8e8f99;
+}
+
+.feedback-troggler {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    transition: 250ms ease-in;
+    transition-property: background-color,
+    border-color;
+    cursor: pointer;
+}
+
+.feedback-chekbox:checked + .feedback-troggler {
+    background-color: #4d5ae5;
+    border-color: transparent;
+}
+
+.feedback-troggler-icon {
+    opacity: 0;
+}
+.feedback-chekbox:checked + .feedback-troggler > .feedback-troggler-icon {
+    opacity: 1;
+}
+
+.feedback-link {
+    line-height: 1.33333;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
+}
 /* #endregion */
