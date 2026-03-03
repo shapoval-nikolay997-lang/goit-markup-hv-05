@@ -1,4 +1,4 @@
-div<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -480,20 +480,26 @@ div<!doctype html>
             </li>
           </ul>
         </div>
-          <div class="footer-subscribe-container">
-      <p class="footer-text">Subscribe</p> 
-      <form class="footer-form" name="subscribe-form">
-        <input class="footer-form-filed" type="email" name="email" placeholder="E-mail" />
-        <button class="btn btn-accent" type="submit">
-          Subscribe
-          <svg class="footer-form-submir" width="24" height="24">
-            <use href="./images/icons.svg#icon-Frame"></use>
-          </svg>
-        </button>
-        </form>
-       </div>
+        <div class="footer-subscribe-container">
+          <p class="footer-text">Subscribe</p>
+          <form class="footer-form" name="subscribe-form">
+            <input
+              class="footer-form-filed"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+            <button class="btn btn-accent" type="submit">
+              Subscribe
+              <svg class="footer-form-submir" width="24" height="24">
+                <use href="./images/icons.svg#icon-Frame"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-btn" type="button" aria-label="close-modal-button">
           <svg class="modal-btn-icon" width="8" height="8">
@@ -537,7 +543,7 @@ div<!doctype html>
             <div class="feedback-field">
               <input
                 class="feedback-imput"
-                type="text"
+                type="email"
                 id="user-email"
                 name="user-email"
               />

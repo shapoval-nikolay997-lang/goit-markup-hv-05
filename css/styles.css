@@ -607,6 +607,7 @@ button {
     align-items: baseline;
     gap: 80px;
 }
+/* #endregion */
 
 /* #region footer-form */
 .footer-form {
@@ -618,6 +619,7 @@ button {
 
 .footer-form-filed:focus {
     border-color: #4d5ae5;
+    color: #FFFFFF;
     outline: none;
 }
 
@@ -630,7 +632,18 @@ button {
     background-color: transparent;
     padding-left: 16px;
     color: #FFFFFF;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
     
+
+}
+
+ .btn-accent:hover,
+ .btn-accent:focus {
+   background-color: #31d0aa;
 }
 
 .btn {
@@ -679,7 +692,7 @@ button {
 
     background-color: rgba(46, 47, 66, 0.4);
     transition-property: opacity, visibility;
-    transition: 250ms ease-in;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -695,7 +708,7 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-70%);
+    transform: translateX(-50%) translateY(-50%);
     opacity: 0;
 
     border-radius: 4px;
@@ -704,7 +717,7 @@ button {
     min-height: 584px;
     padding: 72px 24px 24px 24px;
     transition-property: opacity, transform;
-    transition: 150ms ease;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -716,6 +729,7 @@ button {
 .modal-btn:hover,
 .modal-btn:focus {
     color: #404bbf;
+    background-color: #404bbf;
 }
 
 .modal-btn {
@@ -731,7 +745,7 @@ button {
     padding: 0;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    top: 12px;
+    top: 24px;
     right: 24px;
     fill: #2e2f42;
     
@@ -739,12 +753,12 @@ button {
 }
 
 .modal-btn-icon {
-    stroke: currentColor;
+   background-color: #fff;
 }
 
 .modal-slogan {
     width: 360px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -788,10 +802,10 @@ button {
      0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
     outline: none;
-    transition: border-color 250ms ease-in;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feedback-imput:focus {
-    border-color: #404bbf;
+    border-color: #4d5ae5;
 }
 
 .feedback-icon {
@@ -801,10 +815,11 @@ button {
     transform: translateY(-50%);
     fill: #2e2f42;
     pointer-events: none;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feedback-imput:focus + .feedback-icon {
-    fill: #404bbf;
+    fill: #4d5ae5;
 }
 
 .feedback-comment {
@@ -812,13 +827,20 @@ button {
     width: 100%;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     padding: 8px 16px;
     outline: none;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    resize: none;
+}
+
+.feedback-comment:focus {
+    
+    border-color: #4d5ae5;
 }
 .feedback-comment::placeholder {
     color: rgba(46, 47, 66, 0.4);
@@ -831,7 +853,7 @@ button {
 
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
      color: #8e8f99;
 }
@@ -840,19 +862,19 @@ button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-right: 12px;
+    margin-right: 8px;
     width: 16px;
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    transition: 250ms ease-in;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: background-color,
     border-color;
     cursor: pointer;
 }
 
 .feedback-chekbox:checked + .feedback-troggler {
-    background-color: #4d5ae5;
+    background-color: #404bbf;
     border-color: transparent;
 }
 
