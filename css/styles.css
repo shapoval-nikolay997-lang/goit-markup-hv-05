@@ -642,6 +642,10 @@ button {
 
 }
 
+.footer-form-filed::placeholder {
+    color: #FFFFFF ;
+}
+
  .btn-accent-footer:hover,
  .btn-accent-footer:focus {
    background-color: #31d0aa;
@@ -650,7 +654,7 @@ button {
 .btn {
     border-radius: 4px;
     padding: 8px 24px;
-     width: 165px;
+     min-width: 169px;
     height: 40px;
 }
 
@@ -733,7 +737,7 @@ button {
 .modal-btn:hover,
 .modal-btn:focus {
     
-    background-color: #FFFFFF;
+    background-color: #404bbf;
 }
 
 .modal-btn {
@@ -759,6 +763,7 @@ button {
 
 .modal-btn-icon {
    background-color: #fff;
+   fill: #FFFFFF;
  
 }
 
@@ -779,7 +784,7 @@ button {
   
 
 .feedback-wrapper {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .feedback-label {
@@ -862,6 +867,7 @@ button {
     line-height: 1.33;
     letter-spacing: 0.04em;
      color: #8e8f99;
+     margin-top: 16px;
 }
 
 .feedback-troggler {
