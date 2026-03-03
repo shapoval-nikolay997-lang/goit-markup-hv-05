@@ -792,11 +792,11 @@ button {
     margin-bottom: 8px;
 }
 
-.feedback-form .feedback-wrapper:nth-last-of-type(2) {
+
+   
+.feedback-wrapper:has(.feedback-comment) {
     margin-bottom: 16px;
 }
-   
-
 
 .feedback-label {
     display: block;
