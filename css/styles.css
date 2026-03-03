@@ -752,21 +752,26 @@ button {
     justify-content: center;
     padding: 0;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     top: 24px;
     right: 24px;
     fill: #2e2f42;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     
 }
 
-.modal-btn-icon {
-   background-color: #fff;
-   fill: #FFFFFF;
- 
-}
 
+
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+   
+}
 .modal-slogan {
     width: 360px;
     margin-bottom: 16px;
@@ -785,6 +790,10 @@ button {
 
 .feedback-wrapper {
     margin-bottom: 8px;
+}
+
+.feedback-wrapper:last-of-type {
+    margin-bottom: 16px;
 }
 
 .feedback-label {
@@ -867,7 +876,7 @@ button {
     line-height: 1.33;
     letter-spacing: 0.04em;
      color: #8e8f99;
-     margin-top: 16px;
+     
 }
 
 .feedback-troggler {
